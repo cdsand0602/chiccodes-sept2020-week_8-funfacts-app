@@ -1,0 +1,28 @@
+<div class="top-bar">
+    <h1>What is a Promise</h1>
+</div>
+
+<p>
+    A promise is an object that may produce a single value some time in the future: either a resolved value, or a reason that it’s not resolved 
+    (e.g., a network error occurred). A promise may be in one of 3 possible states: fulfilled, rejected, or pending. Promise users can attach callbacks to handle the fulfilled value or the reason for rejection.
+     Promises are eager, meaning that a promise will start doing whatever task you give it as soon as the promise constructor is invoked.
+</p>
+
+<h1>How Promises Work</h1>
+
+<p>
+    A promise is an object which can be returned synchronously from an asynchronous function.
+    It will be in one of 3 possible states: <br>
+
+    Fulfilled: onFulfilled() will be called (e.g., resolve() was called) <br>
+
+    Rejected: onRejected() will be called (e.g., reject() was called) <br>
+
+    Pending: not yet fulfilled or rejected<br> </p>
+
+<p>A promise is settled if it’s not pending (it has been resolved or rejected). Sometimes people use resolved and settled to mean the same 
+thing: not pending. Once settled, a promise can not be resettled. Calling resolve() or reject() again will have no effect. 
+The immutability of a settled promise is an important feature. Native JavaScript promises don’t expose promise states. Instead, 
+you’re expected to treat the promise as a black box. Only the function responsible for creating the promise will have knowledge of 
+the promise status, or access to resolve or reject.
+</p>
